@@ -1,0 +1,231 @@
+/* Add styles for the navigation */
+nav {
+  background: linear-gradient(to right, #2E3192, #1BFFFF);
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 2px;
+  border-radius: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 5px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:nth-child(1) {
+  color: #960d0d; /* Red color */
+}
+
+nav ul li a:nth-child(2) {
+  color: #0d6996; /* Blue color */
+}
+
+nav ul li a:nth-child(3) {
+  color: #0d960d; /* Green color */
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(165, 240, 215);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  opacity: 1;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Add styles for the introduction section */
+#intro {
+  background-color: #f9f9f9;
+  padding: 175px;
+  text-align: center;
+  border-radius: 0;
+}
+
+#intro h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: rgb(134, 9, 114);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
+}
+
+#intro p {
+  font-size: 20px;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+/* Add general styles for the sections */
+section {
+  padding: 10px;
+  margin-bottom: 0;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #2E3192, #1BFFFF), url('/assets/images/texture2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out; /* Add transition effect */
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+section:first-child {
+  margin-top: 0;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* Rest of the code */
+section:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)); /* Adjust opacity and gradient as needed */
+  z-index: -1;
+  border-radius: 30px;
+  pointer-events: none;
+  transition: background-color 0.5s ease-in-out; /* Add transition effect */
+}
+
+section:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Adjust opacity and gradient as needed */
+  z-index: -1;
+  border-radius: 30px;
+  pointer-events: none;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow properties as needed */
+  transition: box-shadow 0.5s ease-in-out; /* Add transition effect */
+}
+
+section:hover {
+  background-color: #333; /* Update with desired background color on hover */
+}
+
+section:hover:before {
+  background-color: rgba(255, 255, 255, 0.8); /* Update with desired background color on hover */
+}
+
+section:hover:after {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4); /* Update with desired box shadow on hover */
+  transition: box-shadow 0.5s ease-in-out; /* Add transition effect */
+}
+
+section:hover .section-title {
+  color: #ff0000; /* Update with desired title color on hover */
+  transition: color 0.5s ease-in-out; /* Add transition effect */
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+//mouse scrolling animation
+#mouse-scroll {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0; /* Add bottom margin to create spacing */
+  border-radius: 1px;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  opacity: 0.75;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  background-color: #e4bfbf; /* Update with desired color */
+}
+
+.scroll {
+  width: 5px;
+  height: 8px;
+  background-color: #d31d4ac4; /* Update with desired color */
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollAnim 1s infinite;
+}
+
+
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+    top: 15px;
+  }
+  50% {
+    opacity: 1;
+    top: 25px;
+  }
+  100% {
+    opacity: 0;
+    top: 35px;
+  }
+}
+
+
