@@ -1,0 +1,166 @@
+/* Add styles for the introduction section */
+#about-me {
+  background-color: #f9f9f9;
+  padding: 175px;
+  text-align: center;
+  margin-bottom: 0px; /* Add bottom margin to create spacing */
+  border-radius: 0;
+  margin-top: 0;
+}
+body:hover {
+  background: linear-gradient(to right, #2E3192, #1BFFFF);
+}
+
+#about-me:hover,
+#know-me:hover,
+#skills:hover {
+  background: linear-gradient(to right, #2E3192, #1BFFFF);
+}
+#about-me h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: rgb(134, 9, 114);
+}
+
+#about-me p {
+  font-size: 20px;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+/* About Me section styles */
+#about-me {
+  padding: 150px;
+  background: linear-gradient(to right, #2E3192, #1BFFFF), url('/assets/images/texture2.jpg');
+  background-blend-mode: overlay;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  color: #fff;
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+
+
+#about-me h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#about-me p {
+  font-size: 24px;
+  color: #333;
+}
+
+#about-me:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)); /* Adjust opacity and gradient as needed */
+  z-index: -1;
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+#about-me:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Adjust opacity and gradient as needed */
+  z-index: -1;
+  border-radius: 30px;
+  pointer-events: none;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow properties as needed */
+}
+
+/* About Me section styles */
+#know-me {
+  background: linear-gradient(to right, #2E3192, #1BFFFF), url('/assets/images/texture2.jpg');
+  background-blend-mode: overlay;
+  padding: 40px;
+  text-align: justify;
+  margin-bottom: 0;
+  color: #fff;
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+#know-me h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color:#FD5E53;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#know-me p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.0;
+  word-wrap: break-word;
+  font-weight:bolder;
+  color:rgba(18, 209, 223, 0.918);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Skills section styles */
+#skills {
+  background: linear-gradient(to right, #2E3192, #1BFFFF), url('/assets/images/texture2.jpg');
+  background-blend-mode: overlay;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+#skills h1 {
+  font-size: 40px;
+  color: #333;
+}
+
+#skills .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#skills .skills .skills-skill {
+  background: linear-gradient(to right, #FD5E53, #F2B90C); /* Update with desired gradient colors */
+  color: #fff; /* Update with desired text color */
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  width: calc(33.33% - 20px); /* 3 divs in a column */
+}
+
+#skills .skills .skills-skill:nth-child(1),
+#skills .skills .skills-skill:nth-child(2),
+#skills .skills .skills-skill:nth-child(3),
+#skills .skills .skills-skill:nth-child(4) {
+  width: calc(25% - 20px); /* 4 divs in the first column */
+}
+
+#skills .skills .skills-skill:nth-child(5),
+#skills .skills .skills-skill:nth-child(6),
+#skills .skills .skills-skill:nth-child(7) {
+  width: calc(33.33% - 20px); /* 3 divs in the second column */
+}
+
+#skills .skills .skills-skill:nth-child(8),
+#skills .skills .skills-skill:nth-child(9),
+#skills .skills .skills-skill:nth-child(10) {
+  width: calc(33.33% - 20px); /* 3 divs in the third column */
+}
+
+#skills .skills .skills-skill {
+  max-width: 100%;
+  width: fit-content;
+}

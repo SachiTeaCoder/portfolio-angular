@@ -1,0 +1,101 @@
+#contact {
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* Align the entire form to the right side */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  flex-basis: 100%;
+}
+
+.form-group.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group.row > div {
+  flex-basis: 100%;
+}
+
+.form-group.row > div:first-child {
+  flex-basis: 100%;
+}
+
+label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left; /* Align labels to the left side */
+  color: black;
+  font-size: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left; /* Align form fields to the right side */
+}
+
+textarea {
+  height: 150px; /* Adjust the height value as desired */
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+  display: flex;
+  margin: 30px auto; /* Increase the margin value to add more space */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF4081;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add animation transition */
+  align-items: left;
+}
+
+/* Hover effect styles */
+button:hover {
+  background-color: #FF79B0;
+  animation: buttonAnimation 0.5s ease; /* Add animation */
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.character-count,
+.characters-left {
+  text-align: left;
+  font-weight: bolder;
+}
+
